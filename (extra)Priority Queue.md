@@ -1,4 +1,5 @@
 # 6 problems on Priority Queue or Heap
+Note: I have performed all by static implementation to concentrate on Priority Queue concept and not on dynamic. Dynamic is preferrable while writing programs.
 
 # 1. Given array of n integers, construct max PriorityQueue, store n elements of the array into it, delete and print all the elements of the priority queue
 ```
