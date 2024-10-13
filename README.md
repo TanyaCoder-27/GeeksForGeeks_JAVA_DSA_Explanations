@@ -1,6 +1,9 @@
 # DSA_JAVA_GFG
 
 # Java Collections and Algorithms Cheat Sheet
+
+![image](https://github.com/user-attachments/assets/09421f79-6f65-4fde-af78-9373d4051aeb)
+
 ## Collections Framework
 
 # List
