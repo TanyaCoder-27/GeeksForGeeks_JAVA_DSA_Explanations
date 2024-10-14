@@ -47,7 +47,7 @@ class Solution {
     }
 
     public void deleteEle(List<Integer> arr, int z) {
-        Integer element = z;     // Convert primitive int to Integer object to use remove(Object) ---> Autoboxing!!! ; not by index
+        Integer element = z;     // Convert primitive int to Integer(Wrapper Class)object to use remove(Object) ---> Autoboxing!!! ; not by index
         arr.remove(element);
     }
 }
