@@ -73,7 +73,7 @@ Hence, the overall time complexity of the solution is O(n).
 
  
 ## Java Code :
-
+```
 public static ArrayList<Integer> makeBeautiful(int[] arr) {
         // code here
          // Create a stack to store the integers
@@ -110,3 +110,4 @@ public static ArrayList<Integer> makeBeautiful(int[] arr) {
         // Return the result ArrayList
         return result;
     }
+```
