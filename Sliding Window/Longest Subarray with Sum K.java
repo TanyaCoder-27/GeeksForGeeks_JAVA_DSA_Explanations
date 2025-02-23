@@ -24,7 +24,7 @@ class Solution {
         // code here
 
         int n = arr.length; 
-        Map<Integer, Integer> preSumMap = new HashMap<>();
+        Map<Integer, Integer> preSumMap = new HashMap<>(); // sum,i
         int sum = 0;
         int maxLen = 0;
         for (int i = 0; i < n; i++) {
