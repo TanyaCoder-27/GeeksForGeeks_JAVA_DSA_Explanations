@@ -32,7 +32,7 @@ class Solution {
             sum += arr[i];
 
             if (sum == k) {
-                maxLen = Math.max(maxLen, i + 1);
+                maxLen = i+1;
             }
 
             int rem = sum - k;
