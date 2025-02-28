@@ -6,8 +6,6 @@ Imagine you're solving a problem, and you keep solving the same smaller parts of
 
 ### How Does DP Work? (In Simple Steps)
 
-Here are the steps in a way a kid could understand:
-
 1. **Break the Problem Into Smaller Parts**:
    Let's say you want to build a tower with blocks. Instead of building the whole tower at once, you start with one block, then two blocks, and keep adding until your tower is complete. DP works the same way. You take a big problem and break it into smaller, easier problems.
 
