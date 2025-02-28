@@ -1,4 +1,3 @@
-Sure! Let's break down Dynamic Programming (DP) in a simple way.
 
 ### What is Dynamic Programming?
 
