@@ -41,3 +41,31 @@ Here are some classic problems to keep in mind as you practice:
 ---
 
 Greedy is like a tool in your problem-solving toolbox—once you recognize its patterns and limitations, you’ll know exactly when to pull it out!
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Jump Game I:
+The goal is to determine if you can reach the last index of the array.
+
+- At every position, you evaluate the farthest index you can reach and try to cover as much ground as possible.  
+- This approach demonstrates the **Greedy Choice Property**, as you’re making the best possible move at each step.
+
+**How It Works:**  
+By tracking the farthest reachable index as you iterate, you’re checking whether the "local optimal decisions" (jumping as far as you can from each position) lead to the "global solution" (reaching the last index).
+
+---
+
+# Jump Game II:
+Here, the task is to minimize the number of jumps needed to reach the last index.
+
+- At each position, you decide the optimal jump that covers the most distance while minimizing the total jumps.  
+- This is another classic case of the **Greedy Choice Property**, where the local decisions (best possible jump at each step) lead to the global minimum (least number of jumps).
+
+---
+
+# Why Not Other Methods?
+Jump Game problems don’t require you to explore multiple possibilities or backtrack (like Dynamic Programming).  
+Instead, making a single pass through the array with the **Greedy approach** suffices, saving time and space.
+
+This combination of **local optimal decisions** leading directly to the **global solution** is why Jump Game belongs in the Greedy family.
+
