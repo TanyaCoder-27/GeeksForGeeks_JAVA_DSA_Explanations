@@ -59,7 +59,7 @@ class Solution {
         int n = id.length;
 
         // Create an array of Job objects
-        Job[] jobs = new Job[n];
+        Job[] jobs = new Job[n];     //Job class with default constructor being already initialised in Driver's code
         for (int i = 0; i < n; i++) {
             jobs[i] = new Job(id[i], deadline[i], profit[i]);
         }
