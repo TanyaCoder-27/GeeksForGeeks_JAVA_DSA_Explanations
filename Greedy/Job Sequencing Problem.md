@@ -164,3 +164,35 @@ Jobs:
 - This approach prevents **runtime errors** (like `ArrayIndexOutOfBoundsException`).
 - It ensures the algorithm can gracefully handle **deadlines larger than the maximum valid slots**, making it robust for a wide range of inputs.
 
+
+--------------------------------------------
+
+### Time Complexity
+
+#### Sorting the Jobs:
+- Sorting the jobs array based on profit takes **O(n log n)**, where `n` is the number of jobs.
+
+#### Finding Free Slots:
+- For each job, we check at most **min(deadline, maxDeadline)** slots (starting from its deadline and going backward).
+- In the **worst case**, all jobs have deadlines larger than or equal to `maxDeadline`, so we perform **O(n × maxDeadline)** operations for slot allocation.
+
+Thus, the overall time complexity is:  
+**O(n log n + n × maxDeadline)**.  
+For practical scenarios where `maxDeadline` is small (compared to `n`), the complexity simplifies to approximately **O(n log n)**.
+
+---
+
+### Space Complexity
+
+#### Slot Array:
+- A boolean array of size **maxDeadline** is used to track free slots, which takes **O(maxDeadline)** space.
+
+#### Other Storage:
+- Variables for tracking the job count and total profit take **O(1)** space.
+
+---
+
+### Summary:
+- **Time Complexity**: **O(n log n + n × maxDeadline)** (or **O(n log n)** if `maxDeadline` is small).  
+- **Space Complexity**: **O(maxDeadline)**.
+
