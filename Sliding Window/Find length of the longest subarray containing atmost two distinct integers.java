@@ -21,35 +21,34 @@ import java.util.HashMap;
 
 class Solution {
     public static int totalElements(Integer[] arr) {
+        // code here
         //sub array --> sliding window
         // longest --> length --> 2 pointers
         // atmost 2 distinct integers && freq --> HashMap
-      
-        int l = 0, r = 0, max_len = 0;
+        int l=0,r=0, max_len=0;
         int n = arr.length;
+        
+        HashMap<Integer,Integer> map = new HashMap<>();
+        
+        while(r<n){
+            map.put(arr[r], map.getOrDefault(arr[r],0)+1);
 
-        HashMap<Integer, Integer> map = new HashMap<>();
-
-        while (r < n) {
-            // Add the element at the right pointer to the map
-            map.put(arr[r], map.getOrDefault(arr[r], 0) + 1);
-
-            // Shrink the window if there are more than 2 distinct integers
-            while (map.size() > 2) {
-                map.put(arr[l], map.get(arr[l]) - 1); // Decrease frequency,.get(key) to get the frequency count(value) of key
-                if (map.get(arr[l]) == 0) {
-                    map.remove(arr[l]); // Remove the key if frequency is 0, removing the key will lead to deletion of entire key-value pair
+            //shrinking the window when our condition exceeded by l++
+            if(map.size() > 2){
+                map.put(arr[l], map.get(arr[l])-1); //.get(key) to get the frequency count(value) of key and hence decreasing the frequency
+                if(map.get(arr[l]) == 0){
+                    map.remove(arr[l]); //removing the key will lead to deletion of entire key-value pair and hence removing the key-value pair whose frequency is 0
                 }
-                l++; // Move left pointer
+                l++;
             }
 
-            // Update the maximum length of the subarray
-            max_len = Math.max(max_len, r - l + 1);
-
-            // Expand the window by moving the right pointer
+            //calculation of max length otherwise
+            if(map.size() <=2){
+                max_len = Math.max(r-l+1, max_len);
+            }
+            
             r++;
         }
-
-        return max_len;
-    }
+        return max_len;      
+        
 }
