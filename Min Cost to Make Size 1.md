@@ -1,6 +1,5 @@
 
 
-````markdown
 # 🧮 Min Cost to Make Size 1
 
 **Difficulty:** Easy  
@@ -74,19 +73,7 @@ Thus, the **total cost = (n - 1) × min(arr)**
 
 ---
 
-## 🧪 Sample Code (Python)
 
-```python
-def min_cost_to_one(arr):
-    if len(arr) <= 1:
-        return 0
-    return (len(arr) - 1) * min(arr)
-
-# Example usage:
-print(min_cost_to_one([4, 3, 2]))  # Output: 4
-print(min_cost_to_one([3, 4]))     # Output: 3
-print(min_cost_to_one([1]))        # Output: 0
-````
 
 ---
 
@@ -100,7 +87,7 @@ print(min_cost_to_one([1]))        # Output: 0
 
 Here's the same content beautifully converted into a **Markdown-friendly format** for easy pasting into GitHub or documentation:
 
-````markdown
+
 # 🧠 Greedy + Math Insight: Min Cost to Make Size 1
 
 This one's a neat blend of **greedy strategy and math intuition**—let’s unpack it together.
