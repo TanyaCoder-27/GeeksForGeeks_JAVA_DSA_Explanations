@@ -100,7 +100,7 @@ class Solution {
         int n = arr.length;
         int max_len = 0;
         
-        HashMap<Integer, Integer> hm = new HashMap<>();
+        HashMap<Integer, Integer> hm = new HashMap<>();  //(sum,index)
         hm.put(0, -1); // Initial prefix sum 0 at index -1
 
         int pre_sum = 0;
@@ -115,7 +115,7 @@ class Solution {
             if (!hm.containsKey(pre_sum)) {
                 hm.put(pre_sum, i);
             } else {
-                int len = i - hm.get(pre_sum);
+                int len = i - hm.get(pre_sum);  // len is current index - first seen sum index
                 max_len = Math.max(max_len, len);
             }
         }
