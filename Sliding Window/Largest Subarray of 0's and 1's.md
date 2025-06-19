@@ -134,3 +134,97 @@ For arr = [0, 1, 0, 1] → replace 0s with -1:
 [-1, 1, -1, 1] → prefix sums: -1, 0, -1, 0
 Same sums seen again at later indices → longest zero-sum subarray = length 4
 
+
+
+
+ ## 🔍✨ What if the question is: find the **longest subarray** where the **number of 1s and 2s is equal**.
+
+---
+
+## 🧩 Goal:
+
+We want to find the **longest subarray** where the **number of 1s and 2s is equal**.
+
+---
+
+## 🧠 Step 1: Transform the Array
+
+We can't directly count how many 1s and 2s exist in every subarray, so we **recode**:
+
+* Replace `1` with `-1`
+* Replace `2` with `+1`
+* Leave all **other values (like 3)** as `0` (neutral—they don’t affect 1-vs-2 balance)
+
+So for this input:
+`[2, 1, 3, 1, 2, 1, 2]`
+
+We transform it to:
+→ `[+1, -1, 0, -1, +1, -1, +1]`
+ (because 2 → +1, 1 → -1, 3 → 0)
+
+---
+
+## 🔢 Step 2: Create Prefix Sum Array
+
+Now build the **running sum** (prefix sum):
+Keep adding the transformed values from left to right.
+
+Here's how it looks step by step:
+
+| Index | Value | Running Sum |
+| ----- | ----- | ----------- |
+| 0     | +1    | 1           |
+| 1     | -1    | 0           |
+| 2     | 0     | 0           |
+| 3     | -1    | -1          |
+| 4     | +1    | 0           |
+| 5     | -1    | -1          |
+| 6     | +1    | 0           |
+
+So the **prefix sum array** is:
+`[1, 0, 0, -1, 0, -1, 0]`
+
+---
+
+## 🔍 Step 3: Find Longest Subarray with Sum = 0
+
+Now here's the trick:
+
+* If the **same prefix sum** appears again later in the array, the subarray **between those indices has a total sum of 0**.
+* That means in that subarray, the number of `+1` and `-1` are equal.
+* So, in the original array, it means **equal number of 2s and 1s**!
+
+---
+
+## 📐 Example
+
+In the prefix sum:
+`[1, 0, 0, -1, 0, -1, 0]`
+
+* First time we see `0` is at index 1
+* Last time we see `0` is at index 6
+  👉 So subarray from index 2 to 6 (inclusive) is:
+
+```plaintext
+Original array:     [2, 1, 3, 1, 2, 1, 2]
+Indices:               0  1  2  3  4  5  6
+Subarray (2..6):           3  1  2  1  2
+```
+
+In that subarray:
+
+* 1s = 2
+* 2s = 2
+  ✅ So it's balanced!
+
+Length = `6 - 2 + 1 = 5`
+
+---
+
+## ✅ Final Answer
+
+The **longest subarray with equal 1s and 2s** is of length **5**.
+
+---
+
+
