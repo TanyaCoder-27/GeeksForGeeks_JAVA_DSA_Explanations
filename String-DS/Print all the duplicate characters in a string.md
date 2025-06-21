@@ -18,7 +18,7 @@ Output: ['i', 4], ['s', 4], ['p', 2]
 Explanation: Characters i, s, and p have multiple occurrences. The output reflects that with count and order preserved.
 
 
-
+## JAVA CODE:
 ```
 import java.util.*;
 
