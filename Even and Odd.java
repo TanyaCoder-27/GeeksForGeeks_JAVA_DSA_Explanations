@@ -25,7 +25,6 @@ Output :
 Your Task:  
 You don't need to read input or print anything. Your task is to complete the function reArrange() which takes an integer N and an array arr of size N as input and reArranges the array in Place without any extra space.
 
-
 Expected Time Complexity: O(N)
 Expected Auxiliary Space: O(1)
 */
